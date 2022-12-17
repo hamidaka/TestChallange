@@ -4,7 +4,7 @@ const Person = require("../models/userModel")
 exports.protect = async(req,res,next)   =>{
  try {
     let token = req.headers['authorization']
-    console.log(token)
+   
     if (token.includes("Bearer")){
        token = token.split(" ")[1]
     }
